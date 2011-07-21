@@ -1,0 +1,90 @@
+body {
+    vertical-align: top;
+	font-size : 0.7em;
+}
+
+div {
+   vertical-align: top;
+}
+
+#error {
+	text-align: center;
+	position: fixed;
+	left: 15%;
+	top: 0%;
+	width: 70%;
+	background-color: yellow;
+	color: olive;
+}
+
+div#uploadingImg {
+	float:right;
+}
+
+div.image-viewer-section {
+    display: inline-table;
+    width: 100%;
+    height: 100%;
+}
+
+div.image-viewer-section div {
+    margin-left: auto;
+    margin-right: auto;
+    display: table-cell;
+    border:1px solid black;
+    height: 100%;
+}
+
+
+div#transformation-section {
+    display: inline-table;
+    width: 100%;
+}
+
+div#transformation-section .transformation-panel {
+    margin-left: auto;
+    margin-right: auto;
+    display: table-cell;
+    border:1px solid black;
+}
+
+div#image-panel {
+    padding-left: 30px;
+    font-size: 1.2em;
+}
+
+.value-text {
+	font-weight: bold;
+}
+
+div#buttons-panel {
+    width: 30%;
+    display: block;
+}
+
+div.transformation {
+    margin-left: auto;
+    margin-right: auto;
+    border:1px solid black;
+    display: inline-table;
+    height: 100%;
+}
+
+div.transformation span {
+	display: table-row;
+    margin-left: auto;
+    margin-right: auto;
+    border:1px solid black;
+}
+
+div.transformation span label {
+    display: table-cell;
+}
+
+div.transformation span input {
+    display: table-cell;
+}
+
+.button {
+	 margin-right: 0;
+}

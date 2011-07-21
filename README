@@ -1,0 +1,11 @@
+Google App Engine Image Storage
+
+URL: http://www.cloudspokes.com/challenge_detail.html?contestID=198
+Challenge end date: Mon May 23 03:00:00 GMT 2011
+Description
+===========
+<p>Write an app that stores and serves images using the Blobstore and Images APIs. We would like to use App Engine to store images for our site and then serve dynamically defined sizes (i.e., thumbnails) using the Images API.</p> <p>App Engine provides the ability to manipulate image data using a dedicated Images service. The Images service can resize, rotate, flip, and crop images; it can composite multiple images into a single image; and it can convert image data between several formats. It can also enhance photographs using a predefined algorithm. The API can also provide information about an image, such as its format, width, height, and a histogram of color values. The Images service can use a Blobstore value as the source of a transformation.</p> <p>First Place: $1000<br> Second Place: $500</p>
+
+Requirements
+============
+<p>Create an app on Google App Engine in either Java or Python to persist and serve images. Create a sample HTML page that presents the users with an HTML form and allows them to POST an image to the app. Store the image in the Blobstore and return the dedicated URL (getServingUrl()) so that it can be persisted and used later to serve up the image.</p>

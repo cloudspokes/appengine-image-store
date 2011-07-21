@@ -1,0 +1,58 @@
+CloudSpokes GAES Image service
+==============================
+
+This application provides the user with the hability to upload images and obtain as result its blobKey and the serving URL. Additionally, a REST service is provided which implements most of the transformations available in the GAE Image service, the AJAX UI allows you to try them using any uploaded image.
+
+The app is available: http://cloudspokes-images.appspot.com
+
+Features of this implementation
+* Upload functionality, returns BlobKey + Serving URL
+* Preview functionality
+* REST Services
+    REST GET to allow REST like usage
+    Images list metadata
+    Individual image metadata
+    Serving URL query for any key
+    Resize Transformation
+    Crop transformation
+    Rotate transformation
+    Flip horizontally transformation
+    Flip Vertically transformation
+    I'm feeling lucky transformation. (Not working on GAE Java, but already implemented in the REST Service)
+    REST Calls are cached by 15 days, the value is set as a constant in the REST service and can be modified
+* AJAX UI
+    Upload image using AJAX
+    Preview Image
+    Browse all upload images and preview them
+    Call transformations provided by the rest services
+
+
+URLs
+====
+Upload servlets
+/upload: GET  returns the uploadURL where file should be posted
+         POST Processes results informed from GAE about the posted images
+/upload-result: Internal usage, for handling required redirect forced by GAE
+
+REST services
+/rest/images : List of Metadata of all available images 
+/rest/images/{blobkey} : GET the image from the REST service
+/rest/images/{blobkey}/metadata : Metadata of the provided image
+/rest/images/{blobkey}/resized?width=###&height=### : Gets a resized version of the provided image
+/rest/images/{blobkey}/cropped?leftX=###&topY=###&rightX=###&bottomY=### : Gets a cropped version of the provided image
+/rest/images/{blobkey}/rotated?degress=### : Gets a rotated version of the provided image
+/rest/images/{blobkey}/flipH : Gets a flipped horizontally version of the provided image
+/rest/images/{blobkey}/flipV : Gets a flipped vertically version of the provided image
+/rest/images/{blobkey}/lucky : Gets a "I'm feeling lucky" version of the provided image
+
+        
+
+NOTES:
+- Import this eclipse project, in order to try the application locally or to upload it to other location. You need to have installed the GAE eclipse plugin.
+- In order to use the BlobStore a Credit Card number is required, if you hit any issue while uploading the application and you have not set your account with a credit card, that may be the problem.
+- There is no "progress" indication while downloading images or while loading Image list, just give it a few seconds. (Something to improve).
+- Tested on Firefox 3.6.x and Chrome.
+
+
+
+
